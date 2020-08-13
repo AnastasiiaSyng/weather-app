@@ -36,19 +36,18 @@ class App extends React.Component {
         }
     }
 
-
-
     render() {
+        const { temp, city, country, error } = this.state;
         return (
             <div className="container">
                 <div className="wrapper">
                     < Info />
                     < Form weatherMetod={this.gettingWeather}/>
                     < Weather  
-                    temp={this.state.temp}
-                    city={this.state.city}
-                    country={this.state.country}
-                    error={this.state.error}
+                    temp={temp}
+                    city={city}
+                    country={country}
+                    error={error}
                     />
                 </div>
             </div> 
